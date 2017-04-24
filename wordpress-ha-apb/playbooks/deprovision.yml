@@ -3,4 +3,4 @@
   gather_facts: false
   connection: local
   roles:
-    - {role: wordpress_ha, state: present}
+    - {role: wordpress_ha, state: absent}
