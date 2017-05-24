@@ -1,5 +1,4 @@
 ---
-
 - name: create namespace if it does not exist
   openshift_v1_project:
     name: '{{ namespace }}'
@@ -56,7 +55,7 @@
         value: '{{ mediawiki_db_user }}'
       - name: MEDIAWIKI_DB_PASSWORD
         value: '{{ mediawiki_db_password }}'
-      image: docker.io/fabianvf/mediawiki123:latest
+      image: docker.io/jmontleon/mediawiki123:latest
       name: mediawiki123
       ports:
       - container_port: 8080
@@ -83,4 +82,3 @@
       - name: web
         port: 8080
         target_port: 8080
-
